@@ -1,0 +1,22 @@
+declare module 'react' {
+  const React: any
+  export default React
+  export const Fragment: any
+  export type ReactNode = any
+}
+
+declare module 'react/jsx-runtime' {
+  export function jsx(type: any, props?: any, key?: any): any
+  export function jsxs(type: any, props?: any, key?: any): any
+  export const Fragment: any
+}
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any
+    }
+  }
+}
+
+export {}
